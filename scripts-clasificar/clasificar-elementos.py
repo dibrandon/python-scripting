@@ -2,10 +2,10 @@ import os
 import shutil
 
 # Ruta de la carpeta que contiene los archivos JPEG
-path_jpeg = "/ruta/a/tu/carpeta_jpeg"
+path_jpeg = "D:/PILAS ORIGIN - copia/PILAS ORIGIN MASTER/pequenos"
 
 # Ruta de la carpeta en la que buscar y mover los archivos
-path_move = "/ruta/a/tu/carpeta_a_mover"
+path_move = "D:/PILAS ORIGIN - copia/PILAS ORIGIN MASTER/base-elementos"
 
 # Obtener lista de archivos JPEG
 jpeg_files = [f for f in os.listdir(path_jpeg) if f.endswith('.jpeg') or f.endswith('.jpg')]
@@ -16,4 +16,4 @@ for jpeg_file in jpeg_files:
     for file in os.listdir(path_move):
         if file.startswith(filename) and not (file.endswith('.jpeg') or file.endswith('.jpg')):
             # mover el archivo a la carpeta de destino
-            shutil.move(os.path.join(path_move, file), os.path.join("/ruta/a/tu/carpeta_de_destino", file))
+            shutil.move(os.path.join(path_move, file), os.path.join("D:/PILAS ORIGIN - copia/PILAS ORIGIN MASTER/pequenos-psd", file))
